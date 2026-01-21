@@ -1,0 +1,27 @@
+name: Heimdall Build & Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Go
+      uses: actions/setup-go@v5
+      with:
+        go-version: '1.23'
+
+    - name: Install Dependencies
+      run: go mod tidy
+
+    - name: Verify Build
+      run: go build -v .heimdall/cmd/heimdall
+
+    - name: Run Unit Tests
+      run: go test -v .heimdall/internal/adapters/security/...
