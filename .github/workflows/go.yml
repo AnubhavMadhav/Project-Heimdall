@@ -9,6 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./heimdall
+
     steps:
     - uses: actions/checkout@v4
 
@@ -21,7 +26,7 @@ jobs:
       run: go mod tidy
 
     - name: Verify Build
-      run: go build -v .heimdall/cmd/heimdall
+      run: go build -v ./cmd/heimdall
 
     - name: Run Unit Tests
-      run: go test -v .heimdall/internal/adapters/security/...
+      run: go test -v ./internal/adapters/security/...
