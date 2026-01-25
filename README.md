@@ -3,7 +3,7 @@
 
 > *"Heimdall sees all, hears all, and guards the Bifrost. No enemy shall pass through to Asgard."*
 
-<img src="assets/heimdall.png" alt="heimdall" width="717">
+<!-- <img src="assets/heimdall.png" alt="heimdall" width="717"> -->
 
 **Project Heimdall** is a high-security middleware that acts as a **Model Context Protocol (MCP) Gatekeeper** for PostgreSQL databases. It allows Large Language Models (like Claude or Cursor) to query your database to answer questions, while strictly blocking any attempt to modify, delete, or destroy data.
 
