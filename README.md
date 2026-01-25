@@ -7,7 +7,8 @@
 
 **Project Heimdall** is a high-security middleware that acts as a **Model Context Protocol (MCP) Gatekeeper** for PostgreSQL databases. It allows Large Language Models (like Claude or Cursor) to query your database to answer questions, while strictly blocking any attempt to modify, delete, or destroy data.
 
-![Heimdall Architecture](/heimdall-architecture.png)
+<!-- ![Heimdall Architecture](/heimdall-architecture.png) -->
+<img src="heimdall-architecture.png" alt="heimdall-architecture" width="520">
 
 ---
 
